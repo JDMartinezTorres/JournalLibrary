@@ -43,7 +43,7 @@ namespace JournalLibrary
            ,[FirstName]
            ,[MI]
             FROM [dbo].[Users]
-            WHERE UserID = {user.ID};"))
+            WHERE UserName = '{user.UserName}';"))
             {
                 while (reader.Read())
                 {

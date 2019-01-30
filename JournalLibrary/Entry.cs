@@ -22,7 +22,7 @@ namespace JournalLibrary
            ,[LocationID]
            ,[Title]
            ,[EntryText]
-           ,[EntryDate]
+           ,[EntryDate])
             Values('{User.ID}','{Location.ID}','{Title}','{Text}','{EntryDate.ToShortDateString()}');");
         }
 
@@ -35,10 +35,10 @@ namespace JournalLibrary
         public void UpdateEntry()
         {
             ExecuteQueries($@" Update [dbo].[Entries]
-            SET [Title] = {Title}
-                [Text] = {Text}
-                [EntryDate] = {EntryDate}
-            WHERE UserID = {User.ID};");
+            SET [Title] = '{Title}',
+                [EntryText] = '{Text}',
+                [EntryDate] = '{EntryDate}'
+            WHERE [Entries].[UserID] = '{User.ID}';");
         }
     }
 }

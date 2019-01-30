@@ -35,12 +35,13 @@ namespace JournalLibrary
         public void UpdateUser()
         {
             ExecuteQueries($@" UPDATE [dbo].[Users]
-            SET [UserName] = {UserName}
-               ,[Password] = {Password}
-               ,[LastName] = {LastName}
-               ,[FirstName] = {FirstName}
-               ,[MI] = {MI}
-                WHERE UserID = {ID};");
+            SET [UserName] = '{UserName}'
+               ,[Password] = '{Password}'
+               ,[LastName] = '{LastName}'
+               ,[FirstName] = '{FirstName}'
+               ,[MI] = '{MI}'
+                WHERE UserID = '{ID}';");
         }
+
     }
 }
