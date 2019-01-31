@@ -32,9 +32,9 @@ namespace JournalLibrary
         {
             ExecuteQueries($@"UPDATE [dbo].[Location]
              SET 
-            ,[City] = {City}
-            ,[State] = {State}
-            WHERE LocationID = {ID};");
+            ,[City] = '{City}'
+            ,[State] = '{State}'
+            WHERE LocationID = '{ID}';");
         }
     }
 }

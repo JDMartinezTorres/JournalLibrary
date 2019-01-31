@@ -34,14 +34,18 @@ namespace JournalApp.Pages
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            
+
             user.FirstName = FirstNameText.Text;
             user.LastName = LastNameText.Text;
             user.MI = MiddleText.Text;
             user.UserName = UserNameText.Text;
             user.Password = PasswordText.Password;
-            user.NewUser();
-            this.NavigationService.Navigate(new Uri(@"Pages\LogIn.xaml", UriKind.RelativeOrAbsolute));
+            if (!string.IsNullOrWhiteSpace(user.FirstName) && !string.IsNullOrWhiteSpace(user.LastName) && !string.IsNullOrWhiteSpace(user.UserName) && !string.IsNullOrWhiteSpace(user.Password))
+            {
+                user.NewUser();
+                this.NavigationService.Navigate(new Uri(@"Pages\LogIn.xaml", UriKind.RelativeOrAbsolute));
+
+            }
         }
     }
 }
