@@ -43,10 +43,17 @@
 											Grid.Row='0'
 											Grid.ColumnSpan='3'
 											Margin='4'>
-										<Viewbox>
+								<Grid.RowDefinitions>
+										<RowDefinition Height='20*'/>
+										<RowDefinition Height='10*'/>
+								</Grid.RowDefinitions>
+										<Viewbox VerticalAlignment='Bottom'>
 												<TextBlock Text='Please Provide the following Info to make a new account.'
-																	 TextWrapping='Wrap' />
+																	 TextWrapping='Wrap'/>
 										</Viewbox>
+								<Viewbox VerticalAlignment='Bottom' Grid.Row='1'>
+										<TextBlock Text='Please provide all required values' x:Name='ErrorMessage' Foreground='OrangeRed' Visibility='Collapsed'/>
+								</Viewbox>
 								</Grid>
 								<Grid Grid.Row='1'
 											Grid.RowSpan='3'
