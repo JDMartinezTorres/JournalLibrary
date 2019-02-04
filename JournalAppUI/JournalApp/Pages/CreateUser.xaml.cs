@@ -34,7 +34,7 @@ namespace JournalApp.Pages
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            ErrorMessage.Visibility = Visibility.Collapsed;
             user.FirstName = FirstNameText.Text;
             user.LastName = LastNameText.Text;
             user.MI = MiddleText.Text;
@@ -44,7 +44,10 @@ namespace JournalApp.Pages
             {
                 user.NewUser();
                 this.NavigationService.Navigate(new Uri(@"Pages\LogIn.xaml", UriKind.RelativeOrAbsolute));
-
+            }
+            else
+            {
+                ErrorMessage.Visibility = Visibility.Visible;
             }
         }
     }
