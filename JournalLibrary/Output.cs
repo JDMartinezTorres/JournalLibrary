@@ -7,8 +7,10 @@ using System.Data.SqlClient;
 
 namespace JournalLibrary
 {
+    //Output inherits from Database
     public class Output : Database
     {
+        //Method used to return data from the Database 
         public List<Location> GetLocations(User user)
         {
             List<Location> TempList = new List<Location>();

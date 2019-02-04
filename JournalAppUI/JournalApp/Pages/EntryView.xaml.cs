@@ -56,7 +56,6 @@ namespace JournalApp.Pages
             BaseEntry.User = UserContext.User;
             BaseEntry.UpdateEntry();
             SnackbarThree.MessageQueue.Enqueue($"{BaseEntry.Title} Has been updated");
-            
         }
     }
 }
